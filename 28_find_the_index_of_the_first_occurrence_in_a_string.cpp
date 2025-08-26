@@ -1,9 +1,8 @@
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        int index = -1;
 
-        for (int i = 0; i < haystack.length() && index == -1; i++){
+        for (int i = 0; i < haystack.length(); i++){
             if (haystack[i] == needle[0]){
                 if (needle.length() > 1){
                     for (int j = 1; j < needle.length() && haystack[i + j] == needle[j]; j++){
@@ -16,6 +15,6 @@ public:
             }
         }
 
-        return index;
+        return -1;
     }
 };
